@@ -115,7 +115,7 @@ components:
         message: { type: string }
 
 paths:
-  /competition/{media_source}/query:
+  /competition/query:
     x-hidden: true
     post:
       tags: [Competition Signals]
@@ -125,7 +125,7 @@ paths:
         - AfHmac: []
       parameters:
         - name: media_source
-          in: path
+          in: query
           required: true
           schema: { type: string }
           description: Media source name making the query.
